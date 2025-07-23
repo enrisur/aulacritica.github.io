@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clases Particulares - Aula Crítica</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            margin: auto;
+            height: 40vh;
+            width: 80vw;
+            max-width: 450px;
+            max-height: 450px;
+        }
+        .whatsapp-button {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .whatsapp-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        .step-card::after {
+            content: '▼';
+            position: absolute;
+            bottom: -28px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 2rem;
+            color: #FF6B6B; 
+        }
+        .step-card:last-child::after {
+            content: '';
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <main class="container mx-auto p-4 md:p-8 max-w-4xl">
+
+        <header class="text-center mb-12 md:mb-16">
+            <h1 class="text-4xl md:text-5xl font-black text-gray-900">Clases Particulares con Sentido</h1>
+            <p class="text-xl md:text-2xl mt-2 text-red-600 font-bold">Por Profe Enri y Profe Flor</p>
+            <p class="text-lg mt-4 max-w-2xl mx-auto">Un acompañamiento personalizado para transformar los desafíos de aprendizaje en oportunidades de crecimiento.</p>
+        </header>
+
+        <section id="metodologia" class="mb-16 md:mb-20">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Nuestra Metodología de 4 Pasos</h2>
+            <div class="flex flex-col items-center space-y-12">
+                <div class="step-card relative w-full max-w-md bg-white p-6 rounded-2xl shadow-lg text-center">
+                    <div class="text-2xl font-bold text-red-600 mb-2">Paso 1: Diagnóstico</div>
+                    <p>Entrevista inicial con la familia y el estudiante para entender sus necesidades, intereses y desafíos específicos. No hay dos chicos iguales.</p>
+                </div>
+                <div class="step-card relative w-full max-w-md bg-white p-6 rounded-2xl shadow-lg text-center">
+                    <div class="text-2xl font-bold text-red-600 mb-2">Paso 2: Plan de Acción</div>
+                    <p>Diseñamos un plan de trabajo personalizado, seleccionando los recursos y estrategias más adecuados para alcanzar los objetivos.</p>
+                </div>
+                <div class="step-card relative w-full max-w-md bg-white p-6 rounded-2xl shadow-lg text-center">
+                    <div class="text-2xl font-bold text-red-600 mb-2">Paso 3: Clases Dinámicas</div>
+                    <p>Encuentros presenciales donde aplicamos el plan a través de juegos y actividades que motivan, desafían y construyen confianza.</p>
+                </div>
+                <div class="step-card relative w-full max-w-md bg-white p-6 rounded-2xl shadow-lg text-center">
+                    <div class="text-2xl font-bold text-red-600 mb-2">Paso 4: Seguimiento</div>
+                    <p>Comunicación constante con la familia para compartir avances, ajustar estrategias y trabajar siempre en equipo.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="servicios" class="mb-16 md:mb-20">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Nuestros Servicios de Apoyo</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-xl border-t-8 border-red-500">
+                    <h3 class="text-2xl font-bold mb-3">Apoyo en Lectoescritura</h3>
+                    <p class="mb-4">Para chicos y chicas con dificultades específicas de aprendizaje. Nos enfocamos en construir las bases de la lectoescritura de forma sólida y amigable.</p>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li>Conciencia fonológica</li>
+                        <li>Decodificación y fluidez</li>
+                        <li>Comprensión lectora</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-xl border-t-8 border-gray-800">
+                    <h3 class="text-2xl font-bold mb-3">Apoyo Escolar Crítico</h3>
+                    <p class="mb-4">Para quienes necesitan un refuerzo en las tareas y contenidos escolares, pero con nuestro enfoque: aprender a pensar, no solo a repetir.</p>
+                     <ul class="list-disc list-inside space-y-1">
+                        <li>Organización y método de estudio</li>
+                        <li>Resolución de tareas</li>
+                        <li>Desarrollo del pensamiento crítico</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="recursos" class="mb-16 md:mb-20">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="text-center md:text-left">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Recursos que Potencian</h2>
+                    <p class="text-lg mb-4">No usamos solo un libro. Integramos una variedad de nuestros propios recursos digitales y manipulativos para hacer cada clase única y efectiva.</p>
+                </div>
+                <div>
+                    <div class="chart-container">
+                        <canvas id="recursosChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="resultados" class="mb-16 md:mb-20">
+             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="order-2 md:order-1">
+                     <div class="chart-container">
+                        <canvas id="resultadosChart"></canvas>
+                    </div>
+                </div>
+                <div class="text-center md:text-left order-1 md:order-2">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Resultados que Importan</h2>
+                    <p class="text-lg mb-4">Nuestro objetivo va más allá de la nota. Buscamos un impacto real en la confianza y autonomía del estudiante.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="cta" class="bg-gray-800 text-white text-center p-8 md:p-12 rounded-2xl shadow-2xl">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">¿Listos para Empezar?</h2>
+            <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8">Demos el primer paso juntos. Haz clic para enviarnos un WhatsApp y coordinar una entrevista inicial sin compromiso.</p>
+            <a href="https://wa.me/5491138778199?text=Hola%2C%20quisiera%20saber%20m%C3%A1s%20sobre%20las%20clases%20de%20Aula%20Cr%C3%ADtica" target="_blank" class="whatsapp-button inline-block bg-green-500 text-white font-bold py-4 px-8 rounded-full text-xl hover:bg-green-600">
+                <span>💬</span> Chatear por WhatsApp
+            </a>
+            <p class="text-sm mt-4 opacity-70">Serás redirigido a WhatsApp para iniciar la conversación.</p>
+        </section>
+
+    </main>
+
+    <script>
+        function wrapText(label) {
+            const maxLength = 16;
+            if (typeof label === 'string' && label.length > maxLength) {
+                const words = label.split(' ');
+                const lines = [];
+                let currentLine = '';
+                words.forEach(word => {
+                    if ((currentLine + word).length > maxLength) {
+                        lines.push(currentLine.trim());
+                        currentLine = '';
+                    }
+                    currentLine += word + ' ';
+                });
+                lines.push(currentLine.trim());
+                return lines;
+            }
+            return label;
+        }
+
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+              return label.join(' ');
+            }
+            return label;
+        };
+
+        const chartOptions = {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    position: 'bottom',
+                     labels: {
+                        font: {
+                            size: 14,
+                            family: 'Inter'
+                        },
+                        color: '#374151'
+                    }
+                },
+                tooltip: {
+                    callbacks: {
+                        title: tooltipTitleCallback
+                    },
+                    bodyFont: {
+                        size: 14,
+                        family: 'Inter'
+                    },
+                    titleFont: {
+                        size: 16,
+                        family: 'Inter'
+                    }
+                }
+            }
+        };
+        
+        const recursosData = {
+            labels: ['Cuadernillos Didácticos', 'Juegos Interactivos', 'Ejercicios Prácticos'],
+            datasets: [{
+                data: [40, 35, 25],
+                backgroundColor: ['#FF6B6B', '#073B4C', '#118AB2'],
+                borderColor: '#f9fafb',
+                borderWidth: 4
+            }]
+        };
+
+        const recursosCtx = document.getElementById('recursosChart').getContext('2d');
+        new Chart(recursosCtx, {
+            type: 'doughnut',
+            data: recursosData,
+            options: chartOptions
+        });
+        
+        const resultadosData = {
+            labels: ['Mayor Confianza', 'Mejor Comprensión Lectora', 'Más Autonomía'],
+            datasets: [{
+                label: 'Mejora Esperada',
+                data: [85, 90, 80],
+                backgroundColor: ['#FF6B6B', '#118AB2', '#06D6A0'],
+                borderRadius: 6,
+                barThickness: 30,
+            }]
+        };
+
+        const resultadosCtx = document.getElementById('resultadosChart').getContext('2d');
+        new Chart(resultadosCtx, {
+            type: 'bar',
+            data: resultadosData,
+            options: {
+                ...chartOptions,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            color: '#374151',
+                            font: { size: 14 }
+                        }
+                    },
+                    x: {
+                        ticks: {
+                            color: '#374151'
+                        }
+                    }
+                },
+                 plugins: {
+                    ...chartOptions.plugins,
+                    legend: {
+                        display: false
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
